@@ -15,6 +15,7 @@
 		13F0823E2159069200AD7A82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F0823D2159069200AD7A82 /* main.m */; };
 		13F082482159069200AD7A82 /* DizainierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F082472159069200AD7A82 /* DizainierTests.m */; };
 		13F082532159069200AD7A82 /* DizainierUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F082522159069200AD7A82 /* DizainierUITests.m */; };
+		13F08267215945B700AD7A82 /* Nombre.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F08266215945B700AD7A82 /* Nombre.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		13F0824E2159069200AD7A82 /* DizainierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DizainierUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F082522159069200AD7A82 /* DizainierUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DizainierUITests.m; sourceTree = "<group>"; };
 		13F082542159069200AD7A82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13F082652159459000AD7A82 /* Nombre.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nombre.h; sourceTree = "<group>"; };
+		13F08266215945B700AD7A82 /* Nombre.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Nombre.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				13F082392159069200AD7A82 /* LaunchScreen.storyboard */,
 				13F0823C2159069200AD7A82 /* Info.plist */,
 				13F0823D2159069200AD7A82 /* main.m */,
+				13F082652159459000AD7A82 /* Nombre.h */,
+				13F08266215945B700AD7A82 /* Nombre.m */,
 			);
 			path = Dizainier;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 			files = (
 				13F082332159069000AD7A82 /* ViewController.m in Sources */,
 				13F0823E2159069200AD7A82 /* main.m in Sources */,
+				13F08267215945B700AD7A82 /* Nombre.m in Sources */,
 				13F082302159069000AD7A82 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

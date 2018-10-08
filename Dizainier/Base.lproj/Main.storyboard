@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,182 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Mp1-1I-nto">
+                                <rect key="frame" x="54" y="10" width="788" height="373"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t3M-jx-x3i">
+                                        <rect key="frame" x="0.0" y="0.0" width="788" height="29"/>
+                                        <subviews>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="99" translatesAutoresizingMaskIntoConstraints="NO" id="whL-6O-hjH">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="29"/>
+                                                <connections>
+                                                    <action selector="actionStepperValuechanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="kpd-yg-1hY"/>
+                                                </connections>
+                                            </stepper>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geek" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BY-M2-9j7">
+                                                <rect key="frame" x="94" y="0.0" width="645" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="b8x-An-F2P">
+                                                <rect key="frame" x="739" y="0.0" width="51" height="29"/>
+                                                <connections>
+                                                    <action selector="actionSwitchchanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="3gV-Zc-5bk"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dizaines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpe-pL-ZRv">
+                                        <rect key="frame" x="0.0" y="53" width="788" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jVq-hb-mAI">
+                                        <rect key="frame" x="0.0" y="97" width="788" height="29"/>
+                                        <segments>
+                                            <segment title="0"/>
+                                            <segment title="1"/>
+                                            <segment title="2"/>
+                                            <segment title="3"/>
+                                            <segment title="4"/>
+                                            <segment title="5"/>
+                                            <segment title="6"/>
+                                            <segment title="7"/>
+                                            <segment title="8"/>
+                                            <segment title="9"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="actionSegDizaineschanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="8T4-PB-nCo"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unités" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2x-cb-Lq6">
+                                        <rect key="frame" x="0.0" y="149" width="788" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9B3-Ic-aM6">
+                                        <rect key="frame" x="0.0" y="193" width="788" height="29"/>
+                                        <segments>
+                                            <segment title="0"/>
+                                            <segment title="1"/>
+                                            <segment title="2"/>
+                                            <segment title="3"/>
+                                            <segment title="4"/>
+                                            <segment title="5"/>
+                                            <segment title="6"/>
+                                            <segment title="7"/>
+                                            <segment title="8"/>
+                                            <segment title="9"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="actionSegUniteschanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="W18-xy-FQB"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="99" translatesAutoresizingMaskIntoConstraints="NO" id="WdI-uf-qMV">
+                                        <rect key="frame" x="-2" y="245" width="792" height="31"/>
+                                        <connections>
+                                            <action selector="actionSliderchanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="UYf-Ok-Blv"/>
+                                        </connections>
+                                    </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPx-J5-NxI">
+                                        <rect key="frame" x="0.0" y="298.5" width="788" height="30"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="actionButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ug3-jP-ucl"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjB-ch-HOr">
+                                        <rect key="frame" x="0.0" y="352.5" width="788" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Mp1-1I-nto" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="77f-zn-k2i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mp1-1I-nto" secondAttribute="bottom" constant="50" id="APs-3z-WHL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mp1-1I-nto" secondAttribute="bottom" constant="10" id="AvV-5p-iA0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mp1-1I-nto" secondAttribute="trailing" constant="15" id="C9V-Lv-sPT"/>
+                            <constraint firstItem="Mp1-1I-nto" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="FvM-3e-azQ"/>
+                            <constraint firstItem="Mp1-1I-nto" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VjB-aY-P1k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mp1-1I-nto" secondAttribute="trailing" constant="10" id="Z3D-PR-Tgq"/>
+                            <constraint firstAttribute="trailing" secondItem="Mp1-1I-nto" secondAttribute="trailing" constant="10" id="cnm-aL-G3q"/>
+                            <constraint firstItem="Mp1-1I-nto" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dLO-eN-zUy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mp1-1I-nto" secondAttribute="bottom" constant="50" id="i6e-B9-G8H"/>
+                            <constraint firstItem="Mp1-1I-nto" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kFg-cw-HPo"/>
+                            <constraint firstItem="Mp1-1I-nto" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="lNr-Mn-Xg9"/>
+                            <constraint firstItem="Mp1-1I-nto" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="m2O-mr-AMx"/>
+                            <constraint firstItem="Mp1-1I-nto" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="sSk-YG-5Kd"/>
+                            <constraint firstItem="Mp1-1I-nto" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="uBP-ea-rcn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="APs-3z-WHL"/>
+                                <exclude reference="AvV-5p-iA0"/>
+                                <exclude reference="C9V-Lv-sPT"/>
+                                <exclude reference="Z3D-PR-Tgq"/>
+                                <exclude reference="i6e-B9-G8H"/>
+                                <exclude reference="77f-zn-k2i"/>
+                                <exclude reference="FvM-3e-azQ"/>
+                                <exclude reference="VjB-aY-P1k"/>
+                                <exclude reference="dLO-eN-zUy"/>
+                                <exclude reference="lNr-Mn-Xg9"/>
+                                <exclude reference="sSk-YG-5Kd"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="AvV-5p-iA0"/>
+                                <include reference="Z3D-PR-Tgq"/>
+                                <include reference="VjB-aY-P1k"/>
+                                <exclude reference="cnm-aL-G3q"/>
+                                <exclude reference="kFg-cw-HPo"/>
+                                <exclude reference="m2O-mr-AMx"/>
+                                <include reference="sSk-YG-5Kd"/>
+                                <exclude reference="uBP-ea-rcn"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="APs-3z-WHL"/>
+                                <include reference="C9V-Lv-sPT"/>
+                                <include reference="i6e-B9-G8H"/>
+                                <include reference="77f-zn-k2i"/>
+                                <include reference="FvM-3e-azQ"/>
+                                <exclude reference="cnm-aL-G3q"/>
+                                <include reference="dLO-eN-zUy"/>
+                                <exclude reference="kFg-cw-HPo"/>
+                                <include reference="lNr-Mn-Xg9"/>
+                                <exclude reference="m2O-mr-AMx"/>
+                                <exclude reference="uBP-ea-rcn"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="outletButton" destination="vPx-J5-NxI" id="eD1-A8-rUH"/>
+                        <outlet property="outletLabel" destination="IjB-ch-HOr" id="qJJ-cL-J1e"/>
+                        <outlet property="outletSegDizaines" destination="jVq-hb-mAI" id="cso-7e-w8L"/>
+                        <outlet property="outletSegUnites" destination="9B3-Ic-aM6" id="wYt-2r-19x"/>
+                        <outlet property="outletSlider" destination="WdI-uf-qMV" id="m1b-ID-Ztk"/>
+                        <outlet property="outletStepper" destination="whL-6O-hjH" id="Lp1-VD-HzP"/>
+                        <outlet property="outletSwitch" destination="b8x-An-F2P" id="kyl-dn-2qk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="134.5108695652174" y="131.8840579710145"/>
         </scene>
     </scenes>
 </document>
